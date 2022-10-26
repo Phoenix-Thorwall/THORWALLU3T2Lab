@@ -56,8 +56,58 @@ public class SelectionMadness
      */
     public boolean rightTriangle(int side1, int side2, int side3)
     {
-        largest(side1, side2, side3);
+        double a;
+        double b;
+        double c;
+        boolean isRight = true;
 
+       if (largest(side1, side2, side3) == side1)
+       {
+           c = side1;
+           a = side2;
+           b = side3;
+
+           if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2))
+           {
+               isRight = true;
+           }
+           else
+           {
+               isRight = false;
+           }
+       }
+       else if (largest(side1, side2, side3) == side2)
+       {
+           c = side2;
+           a = side1;
+           b = side3;
+
+           if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2))
+           {
+               isRight = true;
+           }
+           else
+           {
+               isRight = false;
+           }
+       }
+       else if (largest(side1, side2, side3) == side3)
+       {
+           c = side3;
+           a = side1;
+           b = side2;
+
+           if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2))
+           {
+               isRight = true;
+           }
+           else
+           {
+               isRight = false;
+           }
+       }
+
+       return isRight;
     }
 
 }
