@@ -35,11 +35,14 @@ public class SelectionMadness
                 return num1;
             }
         }
-
-
-
-
-    return num3;
+        else if (num1 <= num2)
+        {
+            if (num2 >= num3)
+            {
+                return num2;
+            }
+        }
+        return num3;
     }
 
 
@@ -52,6 +55,9 @@ public class SelectionMadness
        of the three?
      */
     public boolean rightTriangle(int side1, int side2, int side3)
-    { /* implement this method! */ }
+    {
+        largest(side1, side2, side3);
+
+    }
 
 }
